@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const tabs = [
@@ -62,9 +62,10 @@ export function ProblemTabs() {
   const [slide, setSlide] = useState(0);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setSlide((s) => (s + 1) % problemImages.length);
-    }, 3200);
+    const id = setInterval(
+      () => setSlide((s) => (s + 1) % problemImages.length),
+      3200
+    );
     return () => clearInterval(id);
   }, []);
 
@@ -105,7 +106,7 @@ export function ProblemTabs() {
                       src={img.src}
                       alt={img.alt}
                       fill
-                      className="rounded-3xl object-cover"
+                      className="object-cover rounded-3xl"
                       priority={idx === slide}
                     />
                   </div>
