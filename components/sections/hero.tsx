@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Download, Play } from "lucide-react";
+import { ProblemTabs } from "@/components/sections/problem-tabs";
 
 const heroImages = [
   { src: "/assets/images/image1.jpg", alt: "Sustainable energy inspiration" },
@@ -158,6 +159,7 @@ export function Hero() {
           </motion.div>
         </div>
       </section>
+      <ProblemTabs />
     </>
   );
 }
