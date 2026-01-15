@@ -31,7 +31,7 @@ export function Navbar() {
   const close = () => setOpen(false);
 
   return (
-    <header className="sticky top-4 z-50 flex justify-center px-4">
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-3">
       <nav className="flex w-full max-w-6xl items-center gap-4 rounded-full border border-eco-green/25 bg-gradient-to-r from-eco-green/12 via-white/6 to-tech-blue/12 px-4 py-3 text-sm text-text-primary backdrop-blur-md md:px-6 dark:border-white/10 dark:from-eco-green/10 dark:via-white/5 dark:to-tech-blue/10">
         <div className="flex items-center gap-3">
           <div className="relative h-12 w-36">
