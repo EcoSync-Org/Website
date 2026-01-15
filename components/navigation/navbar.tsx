@@ -2,17 +2,16 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, LogIn, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#platform", label: "Platform" },
-  { href: "#modules", label: "Modules" },
-  { href: "#students", label: "Students" },
-  { href: "#families", label: "Families" },
-  { href: "#impact", label: "Impact" },
-  { href: "#partners", label: "Partners" },
+  { href: "#home", label: "Home" },
+  { href: "#about", label: "About us" },
+  { href: "#solution", label: "Solution" },
+  { href: "#challenges", label: "Challenges" },
+  { href: "#demo", label: "Demo" },
 ];
 
 export function Navbar() {
@@ -32,7 +31,7 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-3">
-      <nav className="flex w-full max-w-6xl items-center gap-4 rounded-full border border-eco-green/25 bg-gradient-to-r from-eco-green/12 via-white/6 to-tech-blue/12 px-4 py-3 text-sm text-text-primary backdrop-blur-md md:px-6 dark:border-white/10 dark:from-eco-green/10 dark:via-white/5 dark:to-tech-blue/10">
+      <nav className="flex w-full max-w-6xl items-center gap-4 rounded-full border border-eco-green/25 bg-linear-to-r from-eco-green/12 via-white/6 to-tech-blue/12 px-4 py-3 text-sm text-text-primary backdrop-blur-md md:px-6 dark:border-white/10 dark:from-eco-green/10 dark:via-white/5 dark:to-tech-blue/10">
         <div className="flex items-center gap-3">
           <div className="relative h-12 w-36">
             <Image
@@ -58,20 +57,6 @@ export function Navbar() {
         </div>
 
         <div className="hidden flex-1 items-center justify-end gap-2 sm:flex">
-          <Link
-            href="#login"
-            className="hidden items-center gap-1 rounded-full px-3 py-2 text-text-secondary transition hover:text-text-primary md:inline-flex"
-          >
-            <LogIn className="h-4 w-4" />
-            Log in
-          </Link>
-          <Link
-            href="#signup"
-            className="inline-flex items-center gap-1 rounded-full bg-eco-green px-3.5 py-2 text-sm font-semibold text-charcoal shadow-lg shadow-eco-green/30 transition hover:-translate-y-0.5 hover:shadow-eco-green/50"
-          >
-            Sign up
-            <ArrowUpRight className="h-4 w-4" />
-          </Link>
           <ThemeToggle />
         </div>
 
@@ -132,26 +117,8 @@ export function Navbar() {
               </Link>
             ))}
           </div>
-          <div className="mt-6 flex flex-col gap-3">
-            <Link
-              href="#login"
-              onClick={close}
-              className="flex w-full items-center justify-center gap-2 rounded-full border border-white/15 px-4 py-2 text-text-secondary transition hover:text-text-primary"
-            >
-              <LogIn className="h-4 w-4" />
-              Log in
-            </Link>
-            <Link
-              href="#signup"
-              onClick={close}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-eco-green px-4 py-2 text-sm font-semibold text-charcoal shadow-lg shadow-eco-green/30 transition hover:-translate-y-0.5 hover:shadow-eco-green/50"
-            >
-              Sign up
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-            <div className="flex w-full justify-center pt-1">
-              <ThemeToggle />
-            </div>
+          <div className="mt-6 flex w-full justify-center">
+            <ThemeToggle />
           </div>
         </div>
       </div>
