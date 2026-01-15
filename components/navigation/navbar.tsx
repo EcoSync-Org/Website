@@ -33,7 +33,7 @@ export function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-3">
       <nav className="flex w-full max-w-6xl items-center gap-4 rounded-full border border-eco-green/25 bg-linear-to-r from-eco-green/12 via-white/6 to-tech-blue/12 px-4 py-3 text-sm text-text-primary backdrop-blur-md md:px-6 dark:border-white/10 dark:from-eco-green/10 dark:via-white/5 dark:to-tech-blue/10">
         <div className="flex items-center gap-3">
-          <div className="relative h-12 w-36">
+          <div className="relative h-14 w-40">
             <Image
               src="/assets/logo.png"
               alt="EcoSync"
@@ -44,7 +44,7 @@ export function Navbar() {
           </div>
         </div>
 
-        <div className="hidden flex-1 items-center justify-center gap-6 md:flex">
+        <div className="hidden flex-1 items-center justify-center gap-8 md:flex">
           {links.map((link) => (
             <Link
               key={link.href}
@@ -56,7 +56,7 @@ export function Navbar() {
           ))}
         </div>
 
-        <div className="hidden flex-1 items-center justify-end gap-2 sm:flex">
+        <div className="hidden w-24 items-center justify-end sm:flex">
           <ThemeToggle />
         </div>
 

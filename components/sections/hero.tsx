@@ -120,12 +120,11 @@ export function Hero() {
                     key={img.src}
                     className="relative h-48 overflow-hidden rounded-3xl border border-white/30 bg-white/60 shadow-lg shadow-eco-green/10 backdrop-blur sm:h-56 lg:h-64"
                     initial={{
-                      opacity: 0,
+                      opacity: 1,
                       y: 24,
                       rotate: rotations[idx % rotations.length],
                     }}
                     animate={{
-                      opacity: 1,
                       y: [
                         floatY[idx % floatY.length],
                         0,
