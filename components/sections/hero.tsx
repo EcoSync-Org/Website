@@ -7,6 +7,8 @@ import { ProblemTabs } from "@/components/sections/problem-tabs";
 import { SolutionStack } from "@/components/sections/solution-stack";
 import { FeaturesSlider } from "@/components/sections/features-slider";
 import { GetStarted } from "@/components/sections/get-started";
+import { FAQ } from "@/components/sections/faq";
+import { Footer } from "@/components/sections/footer";
 
 const heroImages = [
   { src: "/assets/images/image1.jpg", alt: "Sustainable energy inspiration" },
@@ -166,6 +168,8 @@ export function Hero() {
       <SolutionStack />
       <FeaturesSlider />
       <GetStarted />
+      <FAQ />
+      <Footer />
     </>
   );
 }
